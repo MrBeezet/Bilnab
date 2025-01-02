@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #add8e6; /* Light Blue */
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #ffcc00; /* Yellow */
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Icon */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Profile and Settings */
+.profile-settings {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.profile-settings span {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Search Bar Styling */
+#searchBar {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Property Cards */
+.property {
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 7%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Property Images */
+.property img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Property Title */
+.property h3 {
+    color: #ff6347; /* Red */
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+/* Property Details */
+.property p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.9em;
+}
+</style>
+<body>
+    <header>
+        <div class="menu-icon">☰</div>
+        <div class="profile-settings">
+            <span>Profile</span>
+            <span>Settings</span>
+        </div>
+    </header>
+    <input type="text" id="searchBar" placeholder="Search properties...">
+    <div class="property" data-title="Luxury Villa" data-location="Sokoto" data-price="500,000">
+        <img src="luxury_villa.jpg" alt="Luxury Villa">
+        <h3>Luxury Villa</h3>
+        <p>Location: Sokoto</p>
+        <p>Price: $500,000</p>
+    </div>
+    <div class="property" data-title="Modern Apartment" data-location="Kebbi" data-price="300,000">
+        <img src="modern_apartment.jpg" alt="Modern Apartment">
+        <h3>Modern Apartment</h3>
+        <p>Location: Kebbi</p>
+        <p>Price: $300,000</p>
+    </div>
+    <div class="property" data-title="Cozy Cottage" data-location="Zamfara" data-price="150,000">
+        <img src="cozy_cottage.jpg" alt="Cozy Cottage">
+        <h3>Cozy Cottage</h3>
+        <p>Location: Zamfara</p>
+        <p>Price: $150,000</p>
+    </div>
+    <script>
+        document.getElementById('searchBar').addEventListener('keyup', function() {
+            let query = this.value.toLowerCase();
+            let properties = document.querySelectorAll('.property');
+            properties.forEach(function(property) {
+                let title = property.getAttribute('data-title').toLowerCase();
+                let location = property.getAttribute('data-location').toLowerCase();
+                if (title.includes(query) || location.includes(query)) {
+                    property.style.display = 'inline-block';
+                } else {
+                    property.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilnab - Fast and Reliable Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #ffcc00; /* Yellow */
+    color: #333;
+    padding: 1em;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, #87cefa, #add8e6); /* Light Blue */
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #ff6347; /* Red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero button:hover {
+    background-color: #d9534f;
+}
+
+/* Features Section */
+.features {
+    background-color: #ffcc00; /* Yellow */
+    padding: 2em;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 20px;
+}
+
+.features ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.features ul li {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #add8e6; /* Light Blue */
+    padding: 2em;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 20px;
+}
+
+.testimonials ul {
+    list-style: none;
+    padding: 0;
+}
+
+.testimonials ul li {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ff6347; /* Red */
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #ff6347; /* Red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #d9534f;
+}
+
+/* Login Page Styling */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: linear-gradient(to bottom, #87cefa, #add8e6); /* Light Blue */
+    color: #333;
+}
+
+.login form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login form input[type="text"],
+.login form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login form button {
+    padding: 10px;
+    width: 100%;
+    background-color: #ff6347; /* Red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login form button:hover {
+    background-color: #d9534f;
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Bilnab</h1>
+            <p>Fast and Reliable Delivery Services</p>
+            <button onclick="location.href='login.html'">Get Started</button>
+        </section>
+
+        <section class="features">
+            <h2>What We Offer</h2>
+            <ul>
+                <li>
+                    <p><strong>Fast Delivery</strong></p>
+                    <p>Quick and efficient delivery to your doorstep.</p>
+                </li>
+                <li>
+                    <p><strong>Wide Coverage</strong></p>
+                    <p>Expansive network across the country.</p>
+                </li>
+                <li>
+                    <p><strong>Secure Services</strong></p>
+                    <p>Safe and reliable for all your needs.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <ul>
+                <li>
+                    <p>"Bilnab has been a game-changer for my business. Fast and reliable delivery every time!"</p>
+                    <span>John Doe, CEO of XYZ Corp.</span>
+                </li>
+                <li>
+                    <p>"I was blown away by the speed and efficiency of Bill's delivery services. Highly recommended!"</p>
+                    <span>Jane Smith, Entrepreneur</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bilnab All rights reserved.</p>
+    </footer>
+</body>
+</html>
